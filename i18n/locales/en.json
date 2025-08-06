@@ -1,0 +1,13 @@
+{
+  "registration": {
+    "title": "Create your account",
+    "first_desc": "Sign Up Now to Create AI-Powered, 100% Passing DL Barcodes Instantly!",
+    "second_desc": "A single account created on this site will also be valid on the.",
+    "login_tg": "Login with Telegram",
+    "fullname": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "or_sign_in": "or sign in"
+  },
+  "continue": "Continue"
+}
