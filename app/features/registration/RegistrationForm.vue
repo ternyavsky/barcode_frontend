@@ -1,80 +1,33 @@
 <template>
-  <UCard class="max-w-md mx-auto">
-    <template #header>
-      <h2 class="text-2xl font-bold text-gray-900">Регистрация</h2>
-      <p class="text-gray-600 mt-1">Создайте новый аккаунт</p>
-    </template>
+  <form class="flex flex-col gap-2 w-full max-w-lg">
+    <Input placeholder="Full name" />
+    <Input placeholder="Email" />
+    <Input placeholder="Password" />
 
-    <form @submit.prevent="handleSubmit" class="space-y-4">
-      <div class="grid grid-cols-2 gap-4">
-        <div>
-          <UFormGroup label="Имя">
-            <UInput
-              v-model="form.firstName"
-              placeholder="Введите имя"
-              :error="errors.firstName"
-            />
-          </UFormGroup>
-        </div>
-        <div>
-          <UFormGroup label="Фамилия">
-            <UInput
-              v-model="form.lastName"
-              placeholder="Введите фамилию"
-              :error="errors.lastName"
-            />
-          </UFormGroup>
-        </div>
-      </div>
-
-      <UFormGroup label="Email">
-        <UInput
-          v-model="form.email"
-          type="email"
-          placeholder="Введите email"
-          :error="errors.email"
-        />
-      </UFormGroup>
-
-      <UFormGroup label="Пароль">
-        <UInput
-          v-model="form.password"
-          type="password"
-          placeholder="Введите пароль"
-          :error="errors.password"
-        />
-      </UFormGroup>
-
-      <UFormGroup label="Подтвердите пароль">
-        <UInput
-          v-model="form.confirmPassword"
-          type="password"
-          placeholder="Подтвердите пароль"
-          :error="errors.confirmPassword"
-        />
-      </UFormGroup>
-
-      <UButton type="submit" :loading="isLoading" class="w-full" size="lg">
-        {{ isLoading ? "Регистрация..." : "Зарегистрироваться" }}
-      </UButton>
-    </form>
-
-    <template #footer>
-      <p class="text-center text-sm text-gray-600">
-        Уже есть аккаунт?
-        <NuxtLink
-          to="/login"
-          class="text-blue-600 hover:text-blue-500 font-medium"
-        >
-          Войти
-        </NuxtLink>
-      </p>
-    </template>
-  </UCard>
+    <Button
+      size="md"
+      :color="isDark ? 'white' : 'primary'"
+      text-color="dark"
+      class="w-full mt-14"
+    >
+      {{ $t("continue") }}
+    </Button>
+    <NuxtLink
+      :to="localePath('/login')"
+      class="text-center mt-2 cursor-pointer font-semibold"
+    >
+      {{ $t("registration.or_sign_in") }}
+    </NuxtLink>
+  </form>
 </template>
 
 <script setup lang="ts">
+import Button from "@/shared/ui/Button.vue";
 import type { CreateUserDto } from "~/entities/user/types";
+import Input from "~/shared/ui/Input.vue";
+
+const localePath = useLocalePath();
+const isDark = computed(() => useColorMode().value === "dark");
 
 const form = ref({
   firstName: "",

@@ -2,39 +2,51 @@
   <UButton
     :leading-icon="leadingIcon"
     :trailing-icon="trailingIcon"
+    variant="solid"
     :class="
-      props.class +
-      ' rounded-[12px] h-9 font-semibold ' +
-      (props.textColor === 'primary'
-        ? 'text-primary'
-        : textColor === 'dark'
-        ? 'text-black'
-        : textColor === 'white'
-        ? 'text-white'
-        : 'text-negative')
+      buttonClass +
+      ' rounded-[12px] h-9 font-semibold flex justify-center hover:opacity-85  cursor-pointer '
     "
     :size="size"
-    :variant="variant"
     :disabled="disabled"
     :loading="loading"
     @click="onClick"
   >
-    {{ props.text }}
+    <slot />
   </UButton>
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{
-  text: string;
   leadingIcon?: string;
-  color: "primary" | "secondary" | "tertiary";
+  color: "primary" | "white" | "tertiary";
   textColor: "primary" | "dark" | "white" | "negative";
   size: "sm" | "md" | "lg" | "xl";
   trailingIcon?: string;
-  variant: "solid" | "outline" | "ghost" | "link";
   disabled?: boolean;
   loading?: boolean;
   class?: string;
   onClick?: () => void;
 }>();
+const buttonClass = computed(() => {
+  const textColorClass =
+    props.textColor === "primary"
+      ? "text-primary"
+      : props.textColor === "dark"
+      ? "text-black"
+      : props.textColor === "white"
+      ? "text-white"
+      : "text-negative";
+
+  const bgColorClass =
+    props.color === "primary"
+      ? "bg-bg-primary dark:bg-bg-primary-accent dark:hover:bg-bg-primary-accent hover:bg-bg-primary"
+      : props.color === "white"
+      ? "bg-bg-white hover:bg-bg-white-accent"
+      : props.color === "tertiary"
+      ? "bg-bg-tertiary hover:bg-bg-tertiary-accent"
+      : "";
+
+  return [textColorClass, bgColorClass, props.class].join(" ").trim();
+});
 </script>

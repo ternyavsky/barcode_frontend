@@ -1,29 +1,41 @@
 <template>
-  <div class="items-center justify-center flex flex-col h-full">
-    <h1 class="text-3xl font-bold font-hector tracking-wide">
+  <div class="items-center justify-center flex flex-col h-full px-4">
+    <h1
+      class="text-3xl font-medium font-hector tracking-wide text-text-primary"
+    >
       {{ $t("registration.title") }}
     </h1>
-    <div class="flex flex-col gap-2 font-inter text-tertiary mt-2">
-      <p>
+    <div
+      class="flex flex-col gap-2 font-inter text-text-tertiary mt-2 justify-center"
+    >
+      <p class="font-normal mx-auto">
         {{ $t("registration.first_desc") }}
       </p>
-      <p>
-        {{ $t("registration.second_desc") }}
-      </p>
+      <div class="flex gap-2">
+        <p class="dark:text-white font-medium">
+          {{ $t("registration.second_desc") }}
+        </p>
+        <p class="dark:text-primary font-medium text-black">
+          {{ $t("registration.pdf_project") }}
+        </p>
+      </div>
     </div>
-    <UButton
+    <Button
       leading-icon="mingcute:telegram-fill"
-      class="mt-2 text-primary rounded-[12px] bg-bg-tertiary h-9 font-semibold"
-      variant="solid"
+      class="mt-4"
+      color="tertiary"
+      size="md"
+      text-color="primary"
     >
       {{ $t("registration.login_tg") }}
-    </UButton>
+    </Button>
 
-    <RegistrationForm />
+    <RegistrationForm class="mt-10" />
   </div>
 </template>
 
 <script setup lang="ts">
+import Button from "~/shared/ui/Button.vue";
 import RegistrationForm from "~/features/registration/RegistrationForm.vue";
 
 // Устанавливаем мета-теги для страницы
