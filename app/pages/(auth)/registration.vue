@@ -1,8 +1,6 @@
 <template>
   <div class="items-center justify-center flex flex-col h-full px-4">
-    <h1
-      class="text-3xl font-medium font-hector tracking-wide text-text-primary"
-    >
+    <h1 class="text-3xl font-medium font-hector tracking-wide">
       {{ $t("registration.title") }}
     </h1>
     <div
@@ -36,7 +34,7 @@
 
 <script setup lang="ts">
 import Button from "~/shared/ui/Button.vue";
-import RegistrationForm from "~/features/registration/RegistrationForm.vue";
+import RegistrationForm from "~/features/auth/registration/RegistrationForm.vue";
 
 // Устанавливаем мета-теги для страницы
 useHead({
