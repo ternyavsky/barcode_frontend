@@ -8,6 +8,9 @@ export default defineNuxtConfig({
   devServer: {
     port: 3002,
   },
+  fonts: {
+    families: [{ name: "Space Grotesk", provider: "google" }],
+  },
   i18n: {
     defaultLocale: "en",
     locales: [{ code: "en", name: "English", file: "en.json" }],

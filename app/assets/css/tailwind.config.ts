@@ -10,9 +10,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        space_grotesk: ["Space Grotesk", "ui-sans-serif", "system-ui"],
+        roboto: ["Roboto", "ui-sans-serif", "system-ui"],
         inter: ["Inter", "ui-sans-serif", "system-ui"],
         hector: ["Hector", "ui-sans-serif", "system-ui"],
       },
+    },
+    screens: {
+      mobile: { max: "769px" },
+      tablet: { min: "770px", max: "1439px" },
+      desktop: { min: "1440px" },
     },
   },
 };

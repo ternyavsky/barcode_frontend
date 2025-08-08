@@ -4,8 +4,8 @@
     :trailing-icon="trailingIcon"
     variant="solid"
     :class="
-      buttonClass +
-      ' rounded-[12px] h-9 font-semibold flex justify-center hover:opacity-85  cursor-pointer '
+      ' rounded-[12px] h-9 font-semibold flex justify-center hover:opacity-85  cursor-pointer ' +
+      buttonClass
     "
     :size="size"
     :disabled="disabled"
