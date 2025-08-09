@@ -59,5 +59,20 @@
       "forgot_password": "Forgot password?"
     }
   },
+  "wallet": {
+    "title": "Wallet and Subscription",
+    "history": {
+      "title": "History",
+      "categories": {
+        "all": "All",
+        "top_ups": "Top-ups",
+        "store": "Store",
+        "purchases": "Purchases"
+      },
+      "sort_by": {
+        "title": "Sort by"
+      }
+    }
+  },
   "continue": "Continue"
 }

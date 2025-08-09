@@ -10,9 +10,9 @@
           </span>
         </div>
         <div class="flex items-center gap-7">
-          <span class="text-xs text-primary mobile:hidden tablet:hidden"
-            >{{ t("sidebar.to_home") }}</span
-          >
+          <span class="text-xs text-primary mobile:hidden tablet:hidden">{{
+            t("sidebar.to_home")
+          }}</span>
           <div class="flex gap-4">
             <div class="flex desktop:hidden gap-3">
               <img
@@ -71,7 +71,7 @@
 
       <!-- Navigation Menu -->
       <nav
-        class="flex desktop:flex-col gap-1 flex-1 desktop:overflow-y-auto mt-3 overflow-x-auto tablet:justify-between mobile:justify-between"
+        class="flex desktop:flex-col gap-1 desktop:overflow-y-auto mt-3 overflow-x-auto tablet:justify-between mobile:justify-between"
       >
         <template v-for="item in sidebarItems" :key="item.path">
           <!-- Regular navigation links -->
@@ -128,7 +128,7 @@
 
       <!-- Bottom Advertisement -->
       <div
-        class="bg-primary rounded-[12px] mt-[51px] px-4 py-3 relative overflow-hidden hidden desktop:block"
+        class="bg-primary rounded-[12px] mt-2 px-4 py-3 relative overflow-hidden hidden desktop:block"
       >
         <div class="flex flex-col gap-3">
           <p class="text-mb-3 font-hector text-black max-w-[150px]">

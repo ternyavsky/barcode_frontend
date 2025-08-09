@@ -13,10 +13,20 @@
   font-display: swap;
 }
 
+/* Глобальные стили для черного фона */
+html,
+body,
+#__nuxt,
+#__layout {
+  height: 100% !important;
+  min-height: 100vh !important;
+  background-color: #000000 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 @theme {
-
   --font-space-grotesk: "Space Grotesk", sans-serif;
-
 
   --color-bg-primary: #000000;
   --color-bg-primary-accent: #1be7be;
