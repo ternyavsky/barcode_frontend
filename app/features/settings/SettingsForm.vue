@@ -12,10 +12,12 @@
         @click="fileInput?.click()"
       >
         <div class="flex items-center gap-[10px]">
-          <h3 class="text-sm font-inter font-medium">Upload account photo</h3>
+          <h3 class="text-sm font-inter font-medium">
+            {{ $t("settings.upload_account_photo") }}
+          </h3>
         </div>
         <p class="text-xs font-inter font-medium text-text-secondary">
-          The recommended image resolution is 1600x1600 pixels.
+          {{ $t("settings.upload_account_photo_desc") }}
         </p>
       </div>
     </div>
@@ -36,17 +38,43 @@
           color="secondary"
           text-color="dark"
           class="h-9 my-1 mr-1 font-normal"
-          @click="isModalOpen = true"
+          @click="isChangePasswordModalOpen = true"
         >
-          Change
+          {{ $t("settings.change") }}
         </Button>
-        <div>
-          <ForgotPasswordModal v-model:is-open="isModalOpen" />
-        </div>
+        <ClientOnly>
+          <div>
+            <ChangePasswordModal
+              v-model:is-open="isChangePasswordModalOpen"
+              :set-is-forgot-password-modal-open="
+                () => {
+                  isChangePasswordModalOpen = false;
+                  isForgotPasswordModalOpen = true;
+                }
+              "
+            />
+            <ForgotPasswordModal
+              v-model:is-open="isForgotPasswordModalOpen"
+              :set-is-change-password-modal-open="
+                () => {
+                  isChangePasswordModalOpen = true;
+                  isForgotPasswordModalOpen = false;
+                }
+              "
+            />
+            <ConfirmPasswordModal
+              v-model:is-open="isConfirmPasswordModalOpen"
+              :set-is-forgot-password-modal-open="
+                () => {
+                  isConfirmPasswordModalOpen = false;
+                  isForgotPasswordModalOpen = true;
+                }
+              "
+            />
+          </div>
+        </ClientOnly>
       </div>
-      <div
-        class="flex bg-white rounded-[12px] h-11 items-center px-3 py-2"
-      >
+      <div class="flex bg-white rounded-[12px] h-11 items-center px-3 py-2">
         <img
           src="/assets/svg/white/Telegram.svg"
           alt="telegram"
@@ -72,10 +100,14 @@
 <script setup lang="ts">
 import Input from "~/shared/ui/Input.vue";
 import Button from "~/shared/ui/Button.vue";
-import ForgotPasswordModal from "./ForgotPasswordModal.vue";
+import ForgotPasswordModal from "./ForgotPasswordModal/index.vue";
+import ChangePasswordModal from "./ChangePasswordModal/index.vue";
+import ConfirmPasswordModal from "./ConfirmPasswordModal/index.vue";
 const file = ref<File | null>(null);
 const fileInput = ref<HTMLInputElement | null>(null);
-const isModalOpen = ref(false);
+const isChangePasswordModalOpen = ref(false);
+const isForgotPasswordModalOpen = ref(false);
+const isConfirmPasswordModalOpen = ref(false);
 const handleFileChange = (event: Event) => {
   const input = event.target as HTMLInputElement;
   if (input.files) {

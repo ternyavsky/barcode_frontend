@@ -167,25 +167,27 @@
           />
         </div>
       </div>
-      <Button
-        color="white"
-        class="w-full h-[44px] text-[16px] shadow-[inset_0_-1px_30px_0_rgba(214,214,214,0.3)] mt-[20px]"
-        text-color="dark"
-      >
-        {{ $t("sidebar.edit_pdf") }}
-      </Button>
-      <Button
-        color="primary"
-        class="w-full h-[44px] text-[16px] shadow-[inset_0_-1px_30px_0_rgba(214,214,214,0.3)] mt-3"
-        text-color="dark"
-      >
-        <img
-          src="/assets/svg/dark/plus.svg"
-          alt="Plus"
-          class="w-5 h-5 brightness-0 font-bold"
-        />
-        {{ $t("sidebar.generate_pdf") }}
-      </Button>
+      <div class="flex-col hidden desktop:flex">
+        <Button
+          color="white"
+          class="w-full h-[44px] text-[16px] shadow-[inset_0_-1px_30px_0_rgba(214,214,214,0.3)] mt-[20px]"
+          text-color="dark"
+        >
+          {{ $t("sidebar.edit_pdf") }}
+        </Button>
+        <Button
+          color="primary"
+          class="w-full h-[44px] text-[16px] shadow-[inset_0_-1px_30px_0_rgba(214,214,214,0.3)] mt-3"
+          text-color="dark"
+        >
+          <img
+            src="/assets/svg/dark/plus.svg"
+            alt="Plus"
+            class="w-5 h-5 brightness-0 font-bold"
+          />
+          {{ $t("sidebar.generate_pdf") }}
+        </Button>
+      </div>
     </div>
     <div class="w-[1px] bg-bg-tertiary" />
   </div>
