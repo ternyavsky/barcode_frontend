@@ -5,14 +5,10 @@
       <div class="flex items-center justify-between px-2 py-1 flex-shrink-0">
         <div class="flex items-center gap-2">
           <span class="text-2xl font-bold font-roboto text">LOGO</span>
-          <span
-            class="text-xs dark:text-primary text-text-secondary desktop:hidden"
-            >To Home</span
-          >
+          <span class="text-xs text-primary desktop:hidden">To Home</span>
         </div>
         <div class="flex items-center gap-7">
-          <span
-            class="text-xs dark:text-primary text-text-secondary mobile:hidden tablet:hidden"
+          <span class="text-xs text-primary mobile:hidden tablet:hidden"
             >To Home</span
           >
           <div class="flex gap-4">
@@ -37,16 +33,10 @@
       </div>
 
       <!-- Balance Section -->
-      <div
-        class="dark:bg-bg-secondary bg-bg-white rounded-[12px] mt-3 flex-shrink-0"
-      >
+      <div class="bg-bg-secondary rounded-[12px] mt-3 flex-shrink-0">
         <div class="flex items-center justify-between px-4 py-3">
           <div>
-            <h3
-              class="text-sm dark:text-[#888888] text-text-alternative-secondary mb-1"
-            >
-              Balance
-            </h3>
+            <h3 class="text-sm text-[#888888] mb-1">Balance</h3>
             <p class="text-2xl font-bold font-space-grotesk">$10,100</p>
           </div>
           <img
@@ -55,16 +45,12 @@
             class="w-6 h-6 mb-4"
           />
         </div>
-        <div class="flex w-full dark:bg-bg-tertiary h-[1px] bg-[#e8e8e8]" />
+        <div class="flex w-full bg-bg-tertiary h-[1px]" />
         <div class="px-4 py-3">
           <div class="flex justify-between">
-            <h3
-              class="text-sm dark:text-[#888888] text-text-alternative-secondary mb-1"
-            >
-              Barcodes
-            </h3>
+            <h3 class="text-sm text-[#888888] mb-1">Barcodes</h3>
             <p
-              class="px-2 py-1 dark:bg-bg-tertiary bg-bg-secondary text-primary rounded-[8px] text-[10px]"
+              class="px-2 py-1 bg-bg-tertiary text-primary rounded-[8px] text-[10px]"
             >
               ∞ in 148h
             </p>
@@ -139,7 +125,7 @@
         class="bg-primary rounded-[12px] mt-[51px] px-4 py-3 relative overflow-hidden hidden desktop:block"
       >
         <div class="flex flex-col gap-3">
-          <p class="text-mb-3 font-hector dark:text-black max-w-[150px]">
+          <p class="text-mb-3 font-hector text-black max-w-[150px]">
             Need to create PDF Documents?
           </p>
           <Button

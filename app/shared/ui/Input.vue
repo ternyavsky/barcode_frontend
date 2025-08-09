@@ -16,7 +16,7 @@ const props = defineProps<{
 
 const inputClass = computed(() => {
   return (
-    "rounded-[12px] h-10 font-semibold placeholder:font-semibold placeholder:text-text-alternative-secondary dark:placeholder:text-text-tertiary bg-bg-white dark:bg-bg-secondary p-3 border-none focus:outline-none focus:ring-0" +
+    "rounded-[12px] h-10 font-semibold placeholder:font-semibold placeholder:text-text-tertiary bg-bg-secondary p-3 border-none focus:outline-none focus:ring-0" +
     props.class
   );
 });
