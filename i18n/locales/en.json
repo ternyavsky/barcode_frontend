@@ -45,5 +45,19 @@
     "need_to_generate_barcodes": "Need to generate Barcodes?",
     "yes_i_do": "Yes, I do"
   },
+  "settings": {
+    "title": "Settings",
+    "upload_account_photo": "Upload account photo",
+    "upload_account_photo_desc": "The recommended image resolution is 1600x1600 pixels.",
+    "change": "Change",
+    "send": "Send",
+    "logout": "Log out",
+    "change_password": {
+      "title": "Change Password",
+      "old_password": "Old password",
+      "new_password": "New password",
+      "forgot_password": "Forgot password?"
+    }
+  },
   "continue": "Continue"
 }
