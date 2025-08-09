@@ -5,16 +5,14 @@
       <div class="flex items-center justify-between px-2 py-1 flex-shrink-0">
         <div class="flex items-center gap-2">
           <span class="text-2xl font-bold font-roboto text">LOGO</span>
-          <span
-            class="text-xs dark:text-primary text-text-secondary desktop:hidden"
-            >To Home</span
-          >
+          <span class="text-xs text-primary desktop:hidden">
+            {{ t("sidebar.to_home") }}
+          </span>
         </div>
         <div class="flex items-center gap-7">
-          <span
-            class="text-xs dark:text-primary text-text-secondary mobile:hidden tablet:hidden"
-            >To Home</span
-          >
+          <span class="text-xs text-primary mobile:hidden tablet:hidden">{{
+            t("sidebar.to_home")
+          }}</span>
           <div class="flex gap-4">
             <div class="flex desktop:hidden gap-3">
               <img
@@ -37,15 +35,11 @@
       </div>
 
       <!-- Balance Section -->
-      <div
-        class="dark:bg-bg-secondary bg-bg-white rounded-[12px] mt-3 flex-shrink-0"
-      >
+      <div class="bg-bg-secondary rounded-[12px] mt-3 flex-shrink-0">
         <div class="flex items-center justify-between px-4 py-3">
           <div>
-            <h3
-              class="text-sm dark:text-[#888888] text-text-alternative-secondary mb-1"
-            >
-              Balance
+            <h3 class="text-sm text-[#888888] mb-1">
+              {{ t("sidebar.balance") }}
             </h3>
             <p class="text-2xl font-bold font-space-grotesk">$10,100</p>
           </div>
@@ -55,31 +49,29 @@
             class="w-6 h-6 mb-4"
           />
         </div>
-        <div class="flex w-full dark:bg-bg-tertiary h-[1px] bg-[#e8e8e8]" />
+        <div class="flex w-full bg-bg-tertiary h-[1px]" />
         <div class="px-4 py-3">
           <div class="flex justify-between">
-            <h3
-              class="text-sm dark:text-[#888888] text-text-alternative-secondary mb-1"
-            >
-              Barcodes
+            <h3 class="text-sm text-[#888888] mb-1">
+              {{ t("sidebar.barcodes") }}
             </h3>
             <p
-              class="px-2 py-1 dark:bg-bg-tertiary bg-bg-secondary text-primary rounded-[8px] text-[10px]"
+              class="px-2 py-1 bg-bg-tertiary text-primary rounded-[8px] text-[10px]"
             >
-              ∞ in 148h
+              {{ t("sidebar.in") }}
             </p>
           </div>
           <p
             class="text-[20px] font-space-grotesk font-bold desktop:max-w-[120px]"
           >
-            Unlimited in 140h
+            {{ t("sidebar.unlimited") }}
           </p>
         </div>
       </div>
 
       <!-- Navigation Menu -->
       <nav
-        class="flex desktop:flex-col gap-1 flex-1 desktop:overflow-y-auto mt-3 overflow-x-auto tablet:justify-between mobile:justify-between"
+        class="flex desktop:flex-col gap-1 desktop:overflow-y-auto mt-3 overflow-x-auto tablet:justify-between mobile:justify-between"
       >
         <template v-for="item in sidebarItems" :key="item.path">
           <!-- Regular navigation links -->
@@ -136,11 +128,11 @@
 
       <!-- Bottom Advertisement -->
       <div
-        class="bg-primary rounded-[12px] mt-[51px] px-4 py-3 relative overflow-hidden hidden desktop:block"
+        class="bg-primary rounded-[12px] mt-2 px-4 py-3 relative overflow-hidden hidden desktop:block"
       >
         <div class="flex flex-col gap-3">
-          <p class="text-mb-3 font-hector dark:text-black max-w-[150px]">
-            Need to create PDF Documents?
+          <p class="text-mb-3 font-hector text-black max-w-[150px]">
+            {{ t("sidebar.need_to_generate_barcodes") }}
           </p>
           <Button
             color="white"
@@ -148,7 +140,7 @@
             class="text-xs max-w-[87px] h-[32px]"
             text-color="dark"
           >
-            Yes, I do
+            {{ t("sidebar.yes_i_do") }}
           </Button>
           <img
             src="assets/svg/dark/man.svg"
@@ -166,59 +158,59 @@
 import Button from "~/shared/ui/Button.vue";
 
 const route = useRoute();
-
+const { t } = useI18n();
 const sidebarItems = [
   {
     path: "/barcodes",
-    label: "Barcodes",
+    label: t("sidebar.barcodes"),
     svg: "/_nuxt/assets/svg/dark/barcodes.svg",
     hasDropdown: false,
   },
   {
     path: "/mrz",
-    label: "MRZ",
+    label: t("sidebar.mrz"),
     svg: "/_nuxt/assets/svg/dark/mrz.svg",
     hasDropdown: false,
   },
   {
     path: "/other-tools",
-    label: "Other Tools",
+    label: t("sidebar.other_tools"),
     svg: "/_nuxt/assets/svg/dark/other-tools.svg",
     hasDropdown: true,
   },
   {
     path: "/wallet",
-    label: "Wallet and Subscription",
+    label: t("sidebar.wallet"),
     svg: "/_nuxt/assets/svg/dark/wallet.svg",
     hasDropdown: false,
   },
   {
     path: "/bulk-generation",
-    label: "Bulk generation",
+    label: t("sidebar.bulk_generation"),
     svg: "/_nuxt/assets/svg/dark/bulk.svg",
     hasDropdown: false,
   },
   {
     path: "/store-orders",
-    label: "Store orders",
+    label: t("sidebar.store_orders"),
     svg: "/_nuxt/assets/svg/dark/store-orders.svg",
     hasDropdown: false,
   },
   {
     path: "/referral",
-    label: "Referral program",
+    label: t("sidebar.referral"),
     svg: "/_nuxt/assets/svg/dark/referral.svg",
     hasDropdown: false,
   },
   {
     path: "/help",
-    label: "Help",
+    label: t("sidebar.help"),
     svg: "/_nuxt/assets/svg/dark/help.svg",
     hasDropdown: false,
   },
   {
     path: "/settings",
-    label: "Settings",
+    label: t("sidebar.settings"),
     svg: "/_nuxt/assets/svg/dark/settings.svg",
     hasDropdown: false,
   },

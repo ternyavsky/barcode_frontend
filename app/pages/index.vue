@@ -1,6 +1,6 @@
 <template>
-  <div class="flex h-screen bg-gray-900">
-    <div class="flex-1 bg-gray-900 text-white p-6">
+  <div class="flex h-screen bg-black">
+    <div class="flex-1 bg-black text-white p-6">
       <div class="text-center">
         <h1 class="text-3xl font-bold mb-4">Welcome to Barcode AI</h1>
         <p class="text-gray-400 mb-8">Your smart barcode and MRZ solution</p>

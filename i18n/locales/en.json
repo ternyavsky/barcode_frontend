@@ -28,5 +28,51 @@
     "title": "Sign in",
     "or_create_account": "or Create an account"
   },
+  "sidebar": {
+    "to_home": "To Home",
+    "balance": "Balance",
+    "barcodes": "Barcodes",
+    "unlimited": "Unlimited in 140h",
+    "in": "∞ in 148h",
+    "mrz": "MRZ",
+    "other_tools": "Other Tools",
+    "referral": "Referral program",
+    "help": "Help",
+    "settings": "Settings",
+    "wallet": "Wallet and Subscription",
+    "bulk_generation": "Bulk generation",
+    "store_orders": "Store orders",
+    "need_to_generate_barcodes": "Need to generate Barcodes?",
+    "yes_i_do": "Yes, I do"
+  },
+  "settings": {
+    "title": "Settings",
+    "upload_account_photo": "Upload account photo",
+    "upload_account_photo_desc": "The recommended image resolution is 1600x1600 pixels.",
+    "change": "Change",
+    "send": "Send",
+    "logout": "Log out",
+    "change_password": {
+      "title": "Change Password",
+      "old_password": "Old password",
+      "new_password": "New password",
+      "forgot_password": "Forgot password?"
+    }
+  },
+  "wallet": {
+    "title": "Wallet and Subscription",
+    "history": {
+      "title": "History",
+      "categories": {
+        "all": "All",
+        "top_ups": "Top-ups",
+        "store": "Store",
+        "purchases": "Purchases"
+      },
+      "sort_by": {
+        "title": "Sort by"
+      }
+    }
+  },
   "continue": "Continue"
 }
