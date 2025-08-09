@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout name="main">
-    <div>
-      <h1>Settings</h1>
+    <div class="pt-2">
+      <h1 class="font-inter text-3xl font-normal">Wallet and Subscription</h1>
     </div>
   </NuxtLayout>
 </template>
