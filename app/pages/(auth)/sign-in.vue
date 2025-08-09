@@ -13,7 +13,7 @@
         <p>
           {{ $t("registration.second_desc") }}
         </p>
-        <p class="dark:text-primary font-medium text-black">
+        <p class="font-medium text-black">
           {{ $t("registration.pdf_project") }}
         </p>
       </div>
@@ -23,7 +23,7 @@
       class="mt-4"
       color="tertiary"
       size="md"
-      text-color="primary"
+      text-color="dark"
     >
       {{ $t("registration.login_tg") }}
     </Button>

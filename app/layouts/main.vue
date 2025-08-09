@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-7 px-9 flex gap-[26px] mobile:flex-col tablet:flex-col">
+  <div class="flex gap-[26px] mobile:flex-col tablet:flex-col">
     <Sidebar />
     <slot />
     <Button

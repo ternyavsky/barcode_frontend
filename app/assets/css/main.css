@@ -28,29 +28,9 @@
   --color-negative: #ff191d;
   --font-space-grotesk: "Space Grotesk", sans-serif;
 
-  --ui-primary: ##ffd700;
+  --ui-primary: #ffd700;
   --ui-secondary: #ffffff;
   --ui-tertiary: #ffffff;
   --ui-bg-tertiary: #1be7be;
   --ui-text-tertiary: #1be7be;
-}
-
-:root[class~="dark"] {
-  --color-bg-primary: #000000;
-  --color-bg-primary-accent: #1be7be;
-  --color-bg-secondary: #181818;
-  --color-bg-tertiary: #292929;
-  --color-bg-white: #ffffff;
-  --color-text-black: #000000;
-  --color-text-white: #ffffff;
-  --color-text-primary: #1be7be;
-  --color-text-secondary: #707070;
-  --color-text-tertiary: #a6a6a6;
-  --color-negative: #ff191d;
-
-  --ui-primary: #1be7be;
-  --ui-secondary: #707070;
-  --ui-tertiary: #a6a6a6;
-  --ui-bg-tertiary: #292929;
-  --ui-text-tertiary: #a6a6a6;
 }

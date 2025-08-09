@@ -1,8 +1,8 @@
 <template>
   <form class="flex flex-col gap-2 w-full max-w-lg">
-    <Input placeholder="Full name" />
-    <Input placeholder="Email" />
-    <Input placeholder="Password" />
+    <Input placeholder="Full name" class="h-[44px]" />
+    <Input placeholder="Email" class="h-[44px]" />
+    <Input placeholder="Password" class="h-[44px]" />
 
     <Button
       size="md"
@@ -27,9 +27,4 @@ import Input from "~/shared/ui/Input.vue";
 
 const localePath = useLocalePath();
 const isDark = computed(() => useColorMode().value === "dark");
-
-
-
-
-
 </script>

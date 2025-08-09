@@ -4,7 +4,7 @@
       {{ $t("forgot_password.title") }}
     </h1>
     <div class="flex gap-2 justify-center items-center max-w-lg">
-      <p class="dark:text-text-tertiary font-medium text-center">
+      <p class="font-medium text-center text-text-tertiary">
         {{ $t("forgot_password.desc") }}
       </p>
     </div>

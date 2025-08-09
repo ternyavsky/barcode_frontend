@@ -4,11 +4,9 @@
       {{ $t("confirm.title") }}
     </h1>
     <div class="flex gap-2 justify-center items-center max-w-xs">
-      <p class="dark:text-text-tertiary font-medium text-center">
+      <p class="font-medium text-center text-text-tertiary">
         {{ $t("confirm.desc") }}
-        <span class="dark:text-white font-medium text-black">
-          email@example.com
-        </span>
+        <span class="font-medium text-black"> email@example.com </span>
       </p>
     </div>
 

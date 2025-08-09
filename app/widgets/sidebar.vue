@@ -1,19 +1,18 @@
 <template>
-  <div class="flex gap-3">
+  <div class="flex gap-3 bg-bg-white pt-6 pl-6 pr-4 shadow-inner">
     <div class="w-64 flex flex-col mobile:w-full tablet:w-full">
       <!-- Top Section -->
       <div class="flex items-center justify-between px-2 py-1 flex-shrink-0">
         <div class="flex items-center gap-2">
           <span class="text-2xl font-bold font-roboto text">LOGO</span>
-          <span
-            class="text-xs dark:text-primary text-text-secondary desktop:hidden"
-            >To Home</span
-          >
+          <span class="text-xs text-text-secondary desktop:hidden">{{
+            $t("sidebar.to_home")
+          }}</span>
         </div>
         <div class="flex items-center gap-7">
           <span
-            class="text-xs dark:text-primary text-text-secondary mobile:hidden tablet:hidden"
-            >To Home</span
+            class="text-xs text-text-secondary mobile:hidden tablet:hidden"
+            >{{ $t("sidebar.to_home") }}</span
           >
           <div class="flex gap-4">
             <div class="flex desktop:hidden gap-3">
@@ -38,41 +37,42 @@
 
       <!-- Balance Section -->
       <div
-        class="dark:bg-bg-secondary bg-bg-white rounded-[12px] mt-3 flex-shrink-0"
+        class="rounded-[12px] mt-3 flex-shrink-0 bg-bg-white shadow-[inset_0_-1px_30px_0_rgba(214,214,214,0.3)] relative"
       >
         <div class="flex items-center justify-between px-4 py-3">
           <div>
-            <h3
-              class="text-sm dark:text-[#888888] text-text-alternative-secondary mb-1"
-            >
-              Balance
+            <h3 class="text-sm text-text-alternative-secondary mb-1">
+              {{ $t("sidebar.balance") }}
             </h3>
-            <p class="text-2xl font-bold font-space-grotesk">$10,100</p>
+            <div class="flex items-center gap-2">
+              <p class="text-2xl font-medium font-hector">$10,100</p>
+              <img
+                src="/_nuxt/assets/svg/dark/plus.svg"
+                alt="Add Balance"
+                class="w-8 h-8 brightness-0"
+              />
+            </div>
           </div>
           <img
-            src="/_nuxt/assets/svg/dark/plus.svg"
-            alt="Add Balance"
-            class="w-6 h-6 mb-4"
+            src="/_nuxt/assets/svg/dark/man.svg"
+            alt="Man"
+            class="absolute top-[-8px] right-[-20px] h-[85px]"
           />
         </div>
-        <div class="flex w-full dark:bg-bg-tertiary h-[1px] bg-[#e8e8e8]" />
+        <div class="flex w-full h-[1px] bg-[#e8e8e8]" />
         <div class="px-4 py-3">
           <div class="flex justify-between">
-            <h3
-              class="text-sm dark:text-[#888888] text-text-alternative-secondary mb-1"
-            >
-              Barcodes
+            <h3 class="text-sm text-text-alternative-secondary mb-1">
+              {{ $t("sidebar.pdfs") }}
             </h3>
-            <p
-              class="px-2 py-1 dark:bg-bg-tertiary bg-bg-secondary text-primary rounded-[8px] text-[10px]"
-            >
-              ∞ in 148h
-            </p>
           </div>
+          <p class="text-[20px] font-hector font-medium">
+            {{ $t("sidebar.unlimited") }}
+          </p>
           <p
-            class="text-[20px] font-space-grotesk font-bold desktop:max-w-[120px]"
+            class="px-2 py-1 bg-bg-secondary text-black rounded-[8px] text-[12px] max-w-[77px] text-center"
           >
-            Unlimited in 140h
+            {{ $t("sidebar.in") }}
           </p>
         </div>
       </div>
@@ -139,8 +139,8 @@
         class="bg-primary rounded-[12px] mt-[51px] px-4 py-3 relative overflow-hidden hidden desktop:block"
       >
         <div class="flex flex-col gap-3">
-          <p class="text-mb-3 font-hector dark:text-black max-w-[150px]">
-            Need to create PDF Documents?
+          <p class="text-mb-3 font-hector max-w-[150px]">
+            {{ $t("sidebar.need_to_generate_barcodes") }}
           </p>
           <Button
             color="white"
@@ -148,15 +148,44 @@
             class="text-xs max-w-[87px] h-[32px]"
             text-color="dark"
           >
-            Yes, I do
+            {{ $t("sidebar.yes_i_do") }}
           </Button>
           <img
-            src="assets/svg/dark/man.svg"
+            src="assets/svg/white/AI.svg"
             alt="Man"
-            class="absolute top-2 right-[-45px] h-[126px]"
+            class="absolute top-5 h-[73px] right-0"
+          />
+          <img
+            src="assets/svg/white/AI1.svg"
+            alt="Man"
+            class="absolute top-8 h-[73px] right-[6px] z-10"
+          />
+          <img
+            src="assets/svg/white/AI2.svg"
+            alt="Man"
+            class="absolute top-[44px] h-[73px] right-[12px] z-20"
           />
         </div>
       </div>
+      <Button
+        color="white"
+        class="w-full h-[44px] text-[16px] shadow-[inset_0_-1px_30px_0_rgba(214,214,214,0.3)] mt-[20px]"
+        text-color="dark"
+      >
+        {{ $t("sidebar.edit_pdf") }}
+      </Button>
+      <Button
+        color="primary"
+        class="w-full h-[44px] text-[16px] shadow-[inset_0_-1px_30px_0_rgba(214,214,214,0.3)] mt-3"
+        text-color="dark"
+      >
+        <img
+          src="/assets/svg/dark/plus.svg"
+          alt="Plus"
+          class="w-5 h-5 brightness-0 font-bold"
+        />
+        {{ $t("sidebar.generate_pdf") }}
+      </Button>
     </div>
     <div class="w-[1px] bg-bg-tertiary" />
   </div>
@@ -167,64 +196,44 @@ import Button from "~/shared/ui/Button.vue";
 
 const route = useRoute();
 
+const { t } = useI18n();
 const sidebarItems = [
   {
-    path: "/barcodes",
-    label: "Barcodes",
-    svg: "/_nuxt/assets/svg/dark/barcodes.svg",
+    path: "/pdfs",
+    label: t("sidebar.pdfs"),
+    svg: "/_nuxt/assets/svg/white/pdf.svg",
     hasDropdown: false,
   },
-  {
-    path: "/mrz",
-    label: "MRZ",
-    svg: "/_nuxt/assets/svg/dark/mrz.svg",
-    hasDropdown: false,
-  },
-  {
-    path: "/other-tools",
-    label: "Other Tools",
-    svg: "/_nuxt/assets/svg/dark/other-tools.svg",
-    hasDropdown: true,
-  },
+
   {
     path: "/wallet",
-    label: "Wallet and Subscription",
+    label: t("sidebar.wallet"),
     svg: "/_nuxt/assets/svg/dark/wallet.svg",
     hasDropdown: false,
   },
   {
-    path: "/bulk-generation",
-    label: "Bulk generation",
-    svg: "/_nuxt/assets/svg/dark/bulk.svg",
-    hasDropdown: false,
-  },
-  {
-    path: "/store-orders",
-    label: "Store orders",
-    svg: "/_nuxt/assets/svg/dark/store-orders.svg",
-    hasDropdown: false,
-  },
-  {
     path: "/referral",
-    label: "Referral program",
+    label: t("sidebar.referral"),
     svg: "/_nuxt/assets/svg/dark/referral.svg",
     hasDropdown: false,
   },
   {
     path: "/help",
-    label: "Help",
+    label: t("sidebar.help"),
     svg: "/_nuxt/assets/svg/dark/help.svg",
     hasDropdown: false,
   },
   {
     path: "/settings",
-    label: "Settings",
+    label: t("sidebar.settings"),
     svg: "/_nuxt/assets/svg/dark/settings.svg",
     hasDropdown: false,
   },
 ];
 
 const isActive = (path: string) => {
-  return route.path === path;
+  const isActivePath = route.path === path;
+  console.log(`Path: ${path}, Current: ${route.path}, Active: ${isActivePath}`);
+  return isActivePath;
 };
 </script>

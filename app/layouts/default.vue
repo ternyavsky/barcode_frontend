@@ -1,12 +1,7 @@
 <template>
-  <div
-    class="bg-bg-gray dark:bg-bg-primary w-screen h-screen text-text-primary dark:text-white"
-  >
-
+  <div class="bg-bg-gray w-screen h-screen text-text-primary">
     <slot />
   </div>
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>

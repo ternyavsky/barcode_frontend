@@ -8,6 +8,11 @@ export default defineNuxtConfig({
   devServer: {
     port: 3002,
   },
+  colorMode: {
+    preference: "light",
+    fallback: "light",
+    classSuffix: "",
+  },
   fonts: {
     families: [{ name: "Space Grotesk", provider: "google" }],
   },
