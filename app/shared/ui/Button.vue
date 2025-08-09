@@ -4,7 +4,7 @@
     :trailing-icon="trailingIcon"
     variant="solid"
     :class="
-      ' rounded-[12px] h-9 font-semibold flex justify-center hover:opacity-85  cursor-pointer ' +
+      ' rounded-[12px] h-11 font-semibold flex justify-center hover:opacity-85  cursor-pointer ' +
       buttonClass
     "
     :disabled="disabled"
@@ -18,7 +18,7 @@
 <script setup lang="ts">
 const props = defineProps<{
   leadingIcon?: string;
-  color: "primary" | "white" | "tertiary" | "grey";
+  color: "primary" | "white" | "tertiary" | "secondary";
   textColor: "primary" | "dark" | "white" | "negative";
   trailingIcon?: string;
   disabled?: boolean;
@@ -38,13 +38,13 @@ const buttonClass = computed(() => {
 
   const bgColorClass =
     props.color === "primary"
-      ? "bg-bg-primary hover:bg-bg-primary"
+      ? "bg-bg-primary  hover:bg-bg-primary"
       : props.color === "white"
       ? "bg-bg-white hover:bg-bg-white-accent"
       : props.color === "tertiary"
       ? "bg-bg-tertiary hover:bg-bg-tertiary-accent"
-      : props.color === "grey"
-      ? "bg-[#CACACA] hover:bg-[#CACACA]"
+      : props.color === "secondary"
+      ? "bg-bg-secondary hover:bg-bg-secondary-accent"
       : "";
 
   return [textColorClass, bgColorClass, props.class].join(" ").trim();
