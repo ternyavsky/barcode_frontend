@@ -18,21 +18,20 @@
       <p class="text-xs text-text-tertiary">
         {{ props.dateMinutes }}
       </p>
-      <Button
+      <div
         color="white"
         text-color="dark"
-        class="rounded-[12px] font-medium px-[10px] py-[5px] h-8"
+        class="rounded-[12px] font-medium px-[10px] h-8 my-auto flex items-center"
         :class="statusButton"
       >
         {{ props.status }}
-      </Button>
+      </div>
     </div>
   </div>
   <div class="w-full h-[1px] bg-bg-tertiary mt-[10px]"></div>
 </template>
 
 <script setup lang="ts">
-import Button from "~/shared/ui/Button.vue";
 const props = defineProps<{
   title: string;
   category: string;

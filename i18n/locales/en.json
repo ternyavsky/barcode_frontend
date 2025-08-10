@@ -74,5 +74,18 @@
       }
     }
   },
+  "topUp": {
+    "title": "Top Up",
+    "currentBalance": "Current Balance",
+    "available": "Available",
+    "unlimitedIn": "unlimited in 140h",
+    "paymentMethods": "Payment Methods",
+    "amount": "Amount",
+    "enterAmount": "Enter amount",
+    "quickAmounts": "Quick Amounts",
+    "topUpButton": "Top Up",
+    "termsAgreement": "By clicking \"Top Up\" you agree to our",
+    "termsOfService": "Terms of Service"
+  },
   "continue": "Continue"
 }

@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         space_grotesk: ["Space Grotesk", "ui-sans-serif", "system-ui"],
+        albert_sans: ["Albert Sans", "ui-sans-serif", "system-ui"],
         roboto: ["Roboto", "ui-sans-serif", "system-ui"],
         inter: ["Inter", "ui-sans-serif", "system-ui"],
         hector: ["Hector", "ui-sans-serif", "system-ui"],
