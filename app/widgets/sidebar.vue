@@ -128,7 +128,7 @@
 
       <!-- Bottom Advertisement -->
       <div
-        class="bg-primary rounded-[12px] mt-2 px-4 py-3 relative overflow-hidden hidden desktop:block"
+        class="bg-primary rounded-[12px] mt-10 px-4 py-3 relative overflow-hidden hidden desktop:block"
       >
         <div class="flex flex-col gap-3">
           <p class="text-mb-3 font-hector text-black max-w-[150px]">

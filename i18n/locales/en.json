@@ -87,5 +87,46 @@
     "termsAgreement": "By clicking \"Top Up\" you agree to our",
     "termsOfService": "Terms of Service"
   },
-  "continue": "Continue"
+  "continue": "Continue",
+  "barcodes": {
+    "title": "Barcodes",
+    "create_new": "Create new",
+    "re_create": "Re-Create",
+    "free_adjustment": "Free Adjustment",
+    "sort_by": "Sort by",
+    "export": "Export",
+    "verif": {
+      "title": "Barcode Bypassing Verification",
+      "btn": "Run Barcode Validation",
+      "desc": "If you have a package plan, 1 barcode will be deducted If you pay as you go, $5 will be debited from your balance"
+    },
+    "data": {
+      "title": "Data Verification",
+      "btn": "Run Data Validation",
+      "desc": "If you have a package plan, 1 barcode will be deducted If you pay as you go, $5 will be debited from your balance"
+    },
+    "barcode": {
+      "title": "Details of Barcode",
+      "generation_date": "Generation date",
+      "country": "Country",
+      "state": "State",
+      "revision_date": "Revision date",
+      "surname": "Surname",
+      "first_name": "First name",
+      "birthday": "Birthday",
+      "month_of_expir": "Month of Exparation",
+      "passport_number": "Passport number",
+      "hair_color": "Hair color",
+      "height": "Height",
+      "real_id": "Real ID",
+      "veteran": "Veteran",
+      "donor": "Donor",
+      "di_type": "DI type",
+      "rest": "Rest.",
+      "end": "End.",
+      "issue": "Issue",
+      "exparation": "Exparation",
+      "summary": "Full Details of 128 Code"
+    }
+  }
 }
