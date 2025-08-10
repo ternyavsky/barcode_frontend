@@ -13,6 +13,18 @@
   font-display: swap;
 }
 
+/* Глобальные стили для черного фона */
+html,
+body,
+#__nuxt,
+#__layout {
+  height: 100% !important;
+  min-height: 100vh !important;
+  background-color: #f8f8f8 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 @theme {
   --color-bg-primary: #ffd700;
   --color-bg-primary-accent: #1be7be;

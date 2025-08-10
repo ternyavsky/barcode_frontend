@@ -1,10 +1,10 @@
 <template>
   <NuxtLayout name="main">
-    <div class="pt-2 h-full flex flex-col w-full mx-auto">
-      <h1 class="font-inter text-3xl font-semibold">
+    <div class="pt-2 h-screen flex flex-col w-full mx-auto">
+      <h1 class="font-hector text-3xl font-medium mt-[24px]">
         {{ $t("settings.title") }}
       </h1>
-      <div class="flex justify-center items-center h-full">
+      <div class="flex justify-center h-screen items-center">
         <SettingsForm />
       </div>
     </div>

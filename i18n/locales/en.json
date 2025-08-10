@@ -58,5 +58,60 @@
       "forgot_password": "Forgot password?"
     }
   },
-  "continue": "Continue"
+  "continue": "Continue",
+  "wallet": {
+    "title": "Wallet and Subscription",
+    "history": {
+      "title": "History",
+      "categories": {
+        "all": "All",
+        "top_ups": "Top-ups",
+        "store": "Store",
+        "purchases": "Purchases"
+      },
+      "sort_by": {
+        "title": "Sort by"
+      }
+    },
+    "subscription": {
+      "title": "Subscription",
+      "plan": "Plan",
+      "left": "Left",
+      "unlimited": "Unlimited for 168 hours"
+    },
+    "barcodes": {
+      "title": "Barcodes",
+      "add": "Add",
+      "available": "Available",
+      "unlimited": "10 Barcodes (unlimited in 140h)"
+    },
+    "balance": {
+      "total": "Total balance"
+    },
+    "top_up": {
+      "title": "Top up",
+      "current_balance": "Current balance",
+      "payment": {
+        "title": "Payment",
+        "transfer": "Transfer",
+        "btc_address": "BTC address",
+        "topup_with_oracle": "TopUp with OraclePay to get 20% bonus",
+        "share_code": "Share Code",
+        "share_addy": "Share Addy",
+        "cancel": "Cancel"
+      }
+    },
+    "buy_packages": {
+      "title": "Buy Bills Packages",
+      "purchase": "Purchase",
+      "total_balance": "Total balance",
+      "promo_code": "Promo Code",
+      "apply": "Apply",
+      "buy": "Buy for"
+    },
+    "packages": {
+      "title": "Packages",
+      "buy": "Buy"
+    }
+  }
 }

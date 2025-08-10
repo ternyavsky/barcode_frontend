@@ -10,6 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        albert_sans: ["Albert Sans", "ui-sans-serif", "system-ui"],
         space_grotesk: ["Space Grotesk", "ui-sans-serif", "system-ui"],
         roboto: ["Roboto", "ui-sans-serif", "system-ui"],
         inter: ["Inter", "ui-sans-serif", "system-ui"],

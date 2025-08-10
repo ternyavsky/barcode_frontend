@@ -79,7 +79,7 @@
 
       <!-- Navigation Menu -->
       <nav
-        class="flex desktop:flex-col gap-1 flex-1 desktop:overflow-y-auto mt-3 overflow-x-auto tablet:justify-between mobile:justify-between"
+        class="flex desktop:flex-col gap-1 desktop:overflow-y-auto mt-3 overflow-x-auto tablet:justify-between mobile:justify-between"
       >
         <template v-for="item in sidebarItems" :key="item.path">
           <!-- Regular navigation links -->
