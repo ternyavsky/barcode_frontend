@@ -1,4 +1,39 @@
 {
+  "home": {
+    "home": "Home",
+    "store": "Store",
+    "discussion": "Discussion",
+    "faq": "FAQ",
+    "eecp": "EECP",
+    "title": "Generate Official Documents in Seconds",
+    "desc": "From corporate tax returns to birth, death and diploma certificates, our AI-powered generator delivers print-ready documents in minutes.",
+    "mobile_desc": "Our generator creates perfect PDF417 barcodes that match real driver's licenses. Every detail is encoded correctly to pass any verification system. Works with US, European and international ID formats. Generate single barcodes or bulk batches in seconds.",
+    "second_title": "The leading barcode generator by Russian hackers — now available to everyone",
+    "blocks": {
+      "field_gen": "Automatic Field Generation",
+      "field_gen_desc": "Our tool smartly fills in missing numbers using local and federal guidelines, eliminating manual entry and ensuring seamless barcode creation.",
+      "ai_driven": "AI-Driven Data Processing",
+      "ai_driven_desc": "Leveraging deep learning, our AI analyzes your data to accurately estimate missing parts and generate DMV-level barcodes.",
+      "verif": "Outsmart Verification Systems",
+      "verif_desc": "Our DMV-level barcodes pass top verifiers (BCS, Veriscan, intellicheck, Sumsub) for both online and offline use."
+    },
+    "stats": {
+      "jurisdictions": "Jurisdictions",
+      "barcode_changes": "Barcode Changes",
+      "users": "Users",
+      "generations": "Generations"
+    },
+    "whatsnew": "What's New",
+    "footer": {
+      "main_sections": "Main Sections",
+      "resources": "Resources",
+      "about": "About",
+      "contact": "Contact",
+      "help": "Help",
+      "privacy": "Privacy policy",
+      "terms": "Terms of use"
+    }
+  },
   "registration": {
     "title": "Create your account",
     "first_desc": "Sign Up Now to Create AI-Powered, 100% Passing DL Barcodes Instantly!",
