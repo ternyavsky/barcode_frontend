@@ -4,6 +4,7 @@
     "store": "Store",
     "discussion": "Discussion",
     "faq": "FAQ",
+    "pdfs": "PDF's",
     "eecp": "EECP",
     "title": "Generate Official Documents in Seconds",
     "desc": "From corporate tax returns to birth, death and diploma certificates, our AI-powered generator delivers print-ready documents in minutes.",
@@ -30,7 +31,7 @@
       "about": "About",
       "contact": "Contact",
       "help": "Help",
-      "privacy": "Privacy policy",
+      "privacy": "Privacy Policy",
       "terms": "Terms of use"
     }
   },
@@ -133,12 +134,12 @@
     "verif": {
       "title": "Barcode Bypassing Verification",
       "btn": "Run Barcode Validation",
-      "desc": "If you have a package plan, 1 barcode will be deducted If you pay as you go, $5 will be debited from your balance"
+      "desc": "If you have a package plan, 1 barcode will be deductedIf you pay as you go, $5 will be debited from your balance"
     },
     "data": {
       "title": "Data Verification",
       "btn": "Run Data Validation",
-      "desc": "If you have a package plan, 1 barcode will be deducted If you pay as you go, $5 will be debited from your balance"
+      "desc": "If you have a package plan, 1 barcode will be deductedIf you pay as you go, $5 will be debited from your balance"
     },
     "barcode": {
       "title": "Details of Barcode",
@@ -162,6 +163,28 @@
       "issue": "Issue",
       "exparation": "Exparation",
       "summary": "Full Details of 128 Code"
+    }
+  },
+  "modals": {
+    "topUp": {
+      "title": "Top up",
+      "currentBalance": "Current balance"
+    },
+    "buyPackages": {
+      "title": "Buy packages",
+      "buy": "Buy"
+    },
+    "pay": {
+      "title": "Pay",
+      "transfer": "Transfer",
+      "btc_address": "BTC address",
+      "topup_with_oracle": "Top up with Oracle",
+      "share_code": "Share code",
+      "share_addy": "Share addy",
+      "cancel": "Cancel"
+    },
+    "subscription": {
+      "title": "Subscription"
     }
   }
 }

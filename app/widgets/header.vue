@@ -2,15 +2,17 @@
   <div class="w-full px-9 py-[24px] flex justify-between items-center relative">
     <h1 class="text-2xl font-roboto uppercase font-bold">Logo</h1>
     <div
-      class="gap-[30px] fixed right-0 w-full justify-center hidden desktop:flex"
+      class="gap-[30px] absolute right-0 w-full justify-center hidden desktop:flex"
     >
       <NuxtLink :to="localePath('/')"> {{ t("home.home") }} </NuxtLink>
       <NuxtLink :to="localePath('/barcodes')"> {{ t("home.store") }} </NuxtLink>
       <NuxtLink :to="localePath('/mrz')"> {{ t("home.discussion") }} </NuxtLink>
       <NuxtLink :to="localePath('/mrz')"> {{ t("home.faq") }} </NuxtLink>
     </div>
-    <div class="flex gap-[10px] desktop:gap-[20px] items-center">
-      <div class="items-center hidden desktop:flex">
+    <div
+      class="flex gap-[10px] desktop:gap-[20px] items-center justify-between"
+    >
+      <div class="items-center hidden desktop:flex gap-1">
         <span class="text-sm">EN</span>
         <UIcon name="i-heroicons-chevron-down" class="h-4 w-4" />
       </div>
@@ -42,15 +44,28 @@
         class="cursor-pointer my-auto w-8 mt-[6px] hidden desktop:block"
       />
       <img
+        v-if="!burgerMenuStore.isOpen"
         src="/assets/svg/dark/menu-line-horizontal.svg"
         alt="Search"
         class="cursor-pointer my-auto w-9 mt-[6px] block desktop:hidden"
+        @click="burgerMenuStore.toggle()"
+      />
+      <img
+        v-if="burgerMenuStore.isOpen"
+        src="/assets/svg/dark/close.svg"
+        alt="Search"
+        class="cursor-pointer my-auto w-9 mt-[6px] block desktop:hidden"
+        @click="burgerMenuStore.toggle()"
       />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { useBurgerMenuStore } from "~/shared/store/useBurgerMenu";
+
+const burgerMenuStore = useBurgerMenuStore();
+
 const localePath = useLocalePath();
 const { t } = useI18n();
 </script>

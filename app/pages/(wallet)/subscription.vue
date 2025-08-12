@@ -12,11 +12,9 @@
           {{ $t("modals.buyPackages.title") }}
         </h1>
       </div>
-      <div
-        class="flex justify-between mt-[38px] gap-[10px] h-full mobile:flex-col mobile:mx-4"
-      >
+      <div class="flex mt-[38px] gap-[10px] h-full flex-col w-full">
         <div
-          class="rounded-[12px] flex flex-col mobile:flex-row items-center gap-[25px] py-[14px] px-[15px] mobile:p-4 cursor-pointer size-full max-w-[117px] mobile:max-w-full max-h-[107px] transition-all duration-300 justify-between"
+          class="rounded-[12px] flex justify-between items-center py-[10px] px-3 cursor-pointer size-full transition-all duration-300"
           :class="{
             'bg-white text-black': selectedPackage === packageEl.id,
             'bg-white/10': selectedPackage !== packageEl.id,
@@ -25,14 +23,10 @@
           v-for="packageEl in packages"
           :key="packageEl.id"
         >
-          <p class="text-sm font-semibold mx-auto mobile:mx-0">
+          <p class="text-sm font-semibold">
             {{ packageEl.name }}
           </p>
-          <p
-            class="text-xl font-medium mx-auto font-hector mobile:mx-0 mobile:font-inter"
-          >
-            ${{ packageEl.price }}
-          </p>
+          <p class="text-xl font-medium">${{ packageEl.price }}</p>
         </div>
       </div>
 
@@ -51,9 +45,7 @@
             />
             <div class="flex flex-col">
               <p class="text-sm font-semibold">Total balance</p>
-              <p class="text-text-tertiary text-sm font-semibold">
-                $200 USD
-              </p>
+              <p class="text-text-tertiary text-sm font-semibold">$200 USD</p>
             </div>
           </div>
           <img
@@ -101,23 +93,38 @@ const router = useRouter();
 const packages = [
   {
     id: 1,
-    name: "Package x10",
-    price: 100,
+    name: "Unlimited for 30 minutes",
+    price: 50,
   },
   {
     id: 2,
-    name: "Package x20",
-    price: 200,
+    name: "Unlimited for 30 minutes",
+    price: 50,
   },
   {
     id: 3,
-    name: "Package x50",
-    price: 500,
+    name: "Unlimited for 30 minutes",
+    price: 50,
   },
   {
     id: 4,
-    name: "Package x10",
-    price: 1000,
+    name: "Unlimited for 30 minutes",
+    price: 50,
+  },
+  {
+    id: 5,
+    name: "Unlimited for 30 minutes",
+    price: 50,
+  },
+  {
+    id: 6,
+    name: "Unlimited for 30 minutes",
+    price: 50,
+  },
+  {
+    id: 7,
+    name: "Unlimited for 30 minutes",
+    price: 50,
   },
 ];
 const selectedPackage = ref(1);

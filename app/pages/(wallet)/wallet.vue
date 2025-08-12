@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout name="main">
     <div class="pt-2 flex flex-col mx-auto overflow-y-auto">
-      <h1 class="font-inter text-3xl font-semibold">
+      <h1 class="font-hector text-3xl font-semibold">
         {{ $t("wallet.title") }}
       </h1>
       <div class="flex gap-4 mt-[38px] w-full mobile:flex-col">
