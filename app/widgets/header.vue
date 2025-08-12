@@ -1,6 +1,10 @@
 <template>
   <div class="w-full px-9 py-[24px] flex justify-between items-center relative">
-    <h1 class="text-2xl font-roboto uppercase font-bold">Logo</h1>
+    <NuxtLink :to="localePath('/')">
+      <h1 class="text-2xl font-roboto uppercase font-bold cursor-pointer">
+        Logo
+      </h1>
+    </NuxtLink>
     <div
       class="gap-[30px] absolute right-0 w-full justify-center hidden desktop:flex"
     >

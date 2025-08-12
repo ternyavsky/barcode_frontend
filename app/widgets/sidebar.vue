@@ -4,7 +4,9 @@
       <!-- Top Section -->
       <div class="flex items-center justify-between px-2 py-1 flex-shrink-0">
         <div class="flex items-center gap-2">
-          <span class="text-2xl font-bold font-roboto text">LOGO</span>
+          <NuxtLink :to="localePath('/')">
+            <span class="text-2xl font-bold font-roboto text">LOGO</span>
+          </NuxtLink>
           <span class="text-xs text-primary desktop:hidden">
             {{ t("sidebar.to_home") }}
           </span>
@@ -159,6 +161,7 @@ import Button from "~/shared/ui/Button.vue";
 
 const route = useRoute();
 const { t } = useI18n();
+const localePath = useLocalePath();
 const sidebarItems = [
   {
     path: "/barcodes",

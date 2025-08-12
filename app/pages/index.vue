@@ -81,7 +81,9 @@
     </div>
     <div class="flex flex-col px-[76px]">
       <div class="flex justify-between items-center">
-        <h3 class="text-[48px] font-normal font-hector leading-[120%]">
+        <h3
+          class="font-normal font-hector leading-[120%] desktop:text-[48px] text-[28px]"
+        >
           {{ $t("home.whatsnew") }}
         </h3>
         <div class="flex gap-3">
