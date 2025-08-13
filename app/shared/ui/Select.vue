@@ -2,9 +2,11 @@
   <div class="relative inline-block w-full">
     <select
       name=""
-      :default-value="props.options[0]"
       class="w-full rounded-[12px] px-3 pr-10 h-10 font-semibold placeholder:font-semibold placeholder:text-text-tertiary bg-bg-secondary border-none focus:outline-none focus:ring-0 text-text-tertiary appearance-none"
     >
+      <option v-if="placeholder" :value="placeholder" selected>
+        {{ placeholder }}
+      </option>
       <option v-for="option in options" :key="option" :value="option">
         {{ option }}
       </option>
@@ -18,7 +20,8 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   options: string[];
+  placeholder?: string;
 }>();
 </script>

@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@pinia/nuxt",
   ],
+
   devServer: {
     port: 3002,
   },
@@ -29,6 +30,9 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/css/main.css"],
   vite: {
+    server: {
+      allowedHosts: ["1bc9addd6540.ngrok-free.app"],
+    },
     plugins: [tailwindcss()],
   },
 });

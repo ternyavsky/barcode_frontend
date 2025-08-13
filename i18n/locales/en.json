@@ -186,5 +186,9 @@
     "subscription": {
       "title": "Subscription"
     }
+  },
+  "generating": {
+    "title": "Ai Barcode Generator",
+    "tips": "Tips for This Revision"
   }
 }
